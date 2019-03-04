@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web:
+      image: fpm_nginx:0.0.3
+      ports:
+       - "8889:80"
+      working_dir: /usr/share/nginx/html
+      volumes:
+       - /usr/share/nginx/html:/usr/share/nginx/html
+      command: ["/start.sh"]
+
